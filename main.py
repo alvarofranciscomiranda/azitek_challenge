@@ -112,8 +112,15 @@ def plot_average_time_spent(beacon_counts, total_time_spent):
     plt.title('Average Time Spent per Beacon ID')
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
-    plt.show()
 
+    # Create the results directory if it doesn't exist
+    save_dir = os.path.join(os.path.dirname(__file__), 'results')
+    os.makedirs(save_dir, exist_ok=True)
+
+    # Save the plot in the results directory
+    save_path = os.path.join(save_dir, 'average_time_spent.png')
+    plt.savefig(save_path)
+    plt.show()
 
 if __name__ == "__main__":
     load_dotenv()
