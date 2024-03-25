@@ -58,6 +58,15 @@ When you're done working on the project, you can deactivate the virtual environm
 
 ```deactivate```
 
+## Running the project with Dockerfile
+To build a Docker image from this Dockerfile, navigate to the directory containing your Dockerfile and run:
+
+```docker build -t azytek_challenge .```
+
+To run your Python script (main.py) inside a Docker container, and save the matplot graphic in results directory, use the following command :
+
+```docker run -v /path/on/host:/code/results azytek_challenge```
+
 ## Additional Notes
 Remember to manage your project-specific dependencies within the virtual environment to avoid conflicts with other Python projects.
 
