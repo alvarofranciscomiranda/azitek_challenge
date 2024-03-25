@@ -39,5 +39,5 @@ def retrieve_last_gateway_positions(gateway_id, start_datetime, end_datetime, ap
         positions_data = response.json()
         return positions_data
     else:
-        print(f"Failed to retrieve positions data. Status code: {response.status_code}")
+        print(f"\nFailed to retrieve positions data. Status code: {response.status_code}")
         return None
