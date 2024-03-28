@@ -1,21 +1,21 @@
 # azitek_challenge
 
-This README provides instructions for setting up and running a Python project. The project assumes you have at least Python 3.3 installed and uses virtual environments for managing dependencies. The project also requires the installation of Python packages specified in the requirements.txt file.
+This README provides instructions for setting up and running a Python project. The project assumes you have at least Python 3.9 installed and uses virtual environments for managing dependencies. The project also requires the installation of Python packages specified in the requirements.txt file.
 
 ## Setting Up the Project
 Follow these steps to set up the project:
 
-### 1. Ensure Python 3.8.12 is Installed for example
-Make sure you have Python 3.8.12 installed on your system. You can check your Python version by running:
+### 1. Ensure Python 3.9.12 is Installed for example
+Make sure you have Python 3.9.12 installed on your system. You can check your Python version by running:
 
 ```python --version```
 
-If Python 3.8.12 is not installed, please download and install it from the official Python website: Python Downloads.
+If Python 3.9.12 is not installed, please download and install it from the official Python website: Python Downloads.
 
 ### 2. Install pyenv (Optional)
-If you wish to manage multiple Python versions, you can use pyenv. To set your local Python version to 3.8.12 with pyenv, run:
+If you wish to manage multiple Python versions, you can use pyenv. To set your local Python version to 3.9.12 with pyenv, run:
 
-```pyenv local 3.8.12```
+```pyenv local 3.9.12```
 
 This step is optional, and you can skip it if you're not using pyenv.
 
@@ -57,6 +57,15 @@ Deactivating the Virtual Environment
 When you're done working on the project, you can deactivate the virtual environment and return to your global Python environment:
 
 ```deactivate```
+
+## Running the project with Dockerfile
+To build a Docker image from this Dockerfile, navigate to the directory containing your Dockerfile and run:
+
+```docker build -t azytek_challenge .```
+
+To run your Python script (main.py) inside a Docker container, and save the matplot graphic in results directory, use the following command :
+
+```docker run -v /path/on/host:/code/results azytek_challenge```
 
 ## Additional Notes
 Remember to manage your project-specific dependencies within the virtual environment to avoid conflicts with other Python projects.
