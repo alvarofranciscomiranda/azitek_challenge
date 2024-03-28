@@ -16,6 +16,14 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
+```sh
+npm install vuex
+```
+
+```sh
+npm install bootstrap
+```
+
 ### Compile and Hot-Reload for Development
 
 ```sh
